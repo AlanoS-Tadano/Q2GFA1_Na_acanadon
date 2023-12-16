@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.pagetitle{
+    color: white;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    padding: 1vw;
+}
+
+.links{
+    padding-top: 2vh;
+}
+.links a{
+    margin-left: 1vw;
+}
+
+nav{
+    display: flex;
+    background-color: rgba(128, 128, 128, 0.5);
+    justify-content: space-around;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+}
+
+footer{
+    text-align: center;
+    position: relative;
+    bottom: 0vw;
+    background-color: rgba(128, 128, 128, 0.5);
+}
+
+article{
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    height: 90vh;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+article p{
+    margin-left: 10vw;
+    margin-right: 10vw;
+    text-align: justify;
+    font-size: large;
+}
+
+.icon{
+    background: url(media/images/sprite3.png) no-repeat;
+    width: 66px;
+    height: 66px;
+    display: inline-block;
+}
+
+section{
+    display: flex;
+    text-align: center;
+    height: 100vh;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+#video{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    bottom: 0;
+    z-index: -1;
+}
+
+
+#soundcloud{background-position: -587px -72px;}
+#fb{background-position: -439px -146px;}
+#yt{background-position: -439px -221px;}
+#gmail{background-position: -365px -221px;}
+
+@media screen and (max-width: 600px){
+
+        nav{
+            position: relative;
+            background-color: rgba(128, 128, 128, 0.5);
+        }
+        .pagetitle{
+            padding: 1vw;
+            color: white;
+            transition: .5s;
+        }
+        .links{
+            display: none;
+            z-index: 1;
+            position: absolute;
+            background-color: rgba(128, 128, 128);
+            min-width: 100vw;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.9);
+            transition: .5s;
+        }
+        .links a{
+            color: white;
+            padding-top: 1vh;
+            padding-bottom: 1vh;
+            display: block;
+            transition: .5s;
+            margin-left: 0;
+            padding-left: 1vh;
+        }
+
+        article p{
+            font-size: 2vh;
+        }
+
+        .links a:hover{background-color: rgba(0, 0, 0, 0.5); transition: .5s;}
+        nav:hover .links{display: block; transition: .5s;}
+
+}
+
+
